@@ -22,7 +22,7 @@ clearBtn.style.marginLeft = "10px";
 function getText() {
     text = document.getElementById("textarea");
     str = text.value;
-    const words = str.split(" ");
+    const words = str.trim.split(" ");
     const wordCount = words.reduce((obj, word) => {
         if (obj[word]) {
             obj[word]++;
