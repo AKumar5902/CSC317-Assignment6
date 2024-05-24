@@ -20,9 +20,8 @@ root.append(clearBtn);
 clearBtn.style.marginLeft = "10px";
 
 function getText() {
-    text = document.getElementById("textarea");
-    str = text.value;
-    const words = str.trim.split(" ");
+    const inputText = document.getElementById('textarea').value.trim();
+    const words = inputText.split(/\s+/);
     const wordCount = words.reduce((obj, word) => {
         if (obj[word]) {
             obj[word]++;
